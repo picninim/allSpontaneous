@@ -1,0 +1,14 @@
+{
+  "Id": "allSpontaneous",
+  "DisplayName": "allSpontaneous",
+  "Author": "Picninim piq",
+  "Version": "0.1.0",
+  "ManagerVersion": "0.23.0",
+  "GameVersion": "2.5.0",
+  "Requirements": [],
+  "LoadAfter": [],
+  "AssemblyName": "allSpontaneous.dll",
+  "EntryMethod": "allSpontaneous.Main.Load",
+  "HomePage": "",
+  "Repository": ""
+}

@@ -1,0 +1,14 @@
+<Project>
+  <Target Name="CopyToGameMods" AfterTargets="Build" Condition="'$(GamePath)' != '' And Exists('$(GamePath)')">
+    <PropertyGroup>
+      <ModInstallDir>$(ModsPath)\$(AssemblyName)</ModInstallDir>
+    </PropertyGroup>
+    <ItemGroup>
+      <ModDeploy Include="$(TargetPath)" />
+      <ModDeploy Include="$(OutputPath)Info.json" Condition="Exists('$(OutputPath)Info.json')" />
+    </ItemGroup>
+    <MakeDir Directories="$(ModInstallDir)" />
+    <Copy SourceFiles="@(ModDeploy)" DestinationFolder="$(ModInstallDir)" SkipUnchangedFiles="true" />
+    <Message Importance="high" Text="Deployed mod to $(ModInstallDir)" />
+  </Target>
+</Project>
